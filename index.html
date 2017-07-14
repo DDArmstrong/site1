@@ -2,13 +2,11 @@
 
 <html>
     <head>
-<<<<<<< HEAD
-        <title>Revealed Comparitive Advantage</title>
+        <title>Investigating Health Gaps</title>
         <script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.13.full.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
-=======
         <title>Healthcare Gaps</title>
->>>>>>> dan_branch
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
          <!-- CSS Files comes here -->
@@ -47,16 +45,16 @@
 	    <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
 	      <ul class="nav navbar-nav menu">
 	        <li>
-	          <a href="#main">Home</a>
+	          <a style="color:gray;" href="#main">Home</a>
 	        </li>
 	        <li>
-	          <a href="#features">Explore Features</a>
+	          <a style="color:gray;" href="#features">Explore Features</a>
 	        </li>
 	        <li>
-	          <a href="#product">Explore Data</a>
+	          <a style="color:gray;" href="#product">Explore Data</a>
 	        </li>
 	        <li>
-	          <a href="#slider">News</a>
+	          <a style="color:gray;" href="#slider">News</a>
 	        </li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right header-button">
@@ -70,13 +68,13 @@
 	<!-- End Header -->
 
 	<!-- Start main Section	-->
-	<section id="main"  class="section main">
+	<section style="margin-top:10px;"id="main"  class="section main">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5"></div>
 				<div class="col-md-7">
 					<div class="lp-element">
-						<h1 data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">Health Care: Who Needs It? Who Has it?</h1>
+						<h1 data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><u><span style="font-size:40pt;">Health Care:</span></u><br /><span style="font-size:30pt;">Who Needs It? <br />Who Has it?</span></h1>
                                                 <div class="blackdiv"  data-scroll-reveal="wait 0.35s, then enter left and move 40px over 1s"><p class="mainp">When it comes to healthcare, there's a gap between supply and demand. And that gap varies by location.<br /><br />The demand depends on the number of unhealthy people and their ability to pay for care. The supply includes things like the number of doctors and healthcare facilities.. Gaps occur when there's a big difference between what people need (demand) and what they can get (supply).<br /><br />Check out our data stories below to investigate health care gaps!</p></div>
 						<p  data-scroll-reveal="wait 0.35s, then enter left and move 40px over 1s"><a href="#features" class="btn btn-primary btn-lg" role="button" data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">Explore Data</a> <a a href="#slider" class="btn btn-danger btn-lg" role="button" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Explore News</a></p>
 					</div>
@@ -98,7 +96,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="block-icon text-center">
-                                            <span><i class="fa fa-tree" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
+                                            <span><i class="fa fa-bar-chart" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
 						<h3 data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Demand for Healthcare</h3>
 						<p data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Check out the percentage of  adults reporting fair or poor health. The higher this percentage, the greater the demand for healthcare.</p>
 						<a href="#product" type="button" class="btn btn-primary btn-md btn-rocket btn-rocket-default" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Learn More</a>
@@ -106,7 +104,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="block-icon text-center">
-						<span><i class="fa fa-star" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
+						<span><i class="fa fa-bar-chart" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
 						<h3 data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Insurance Coverage</h3>
 						<p data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Where are the highest ratios of insured to uninsured? The lowest?</p>
 						<a href="#insurance_row" type="button" class="btn btn-primary btn-md btn-rocket btn-rocket-default" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Learn More</a>
@@ -140,7 +138,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="block-icon text-center">
-						<span><i class="fa fa-bars" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
+						<span><i class="fa fa-star" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s"></i></span>
 						<h3 data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Data Powered Progress</h3>
 						<p data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Check out various publications regarding similar health studies! </p>
 						<a href="#slider" type="button" class="btn btn-primary btn-md btn-rocket btn-rocket-default" data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Learn More</a>
@@ -166,9 +164,8 @@
 				<div id="demand" class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
-						<h2 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">See the chart <br/></h2>
-						<p data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The University of Wisconsin compiles a dataset called County Health Rankings. There's a variable called "poor or fair health", which is the percentage of adults reporting fair or poor health. The higher this percentage, the greater the demand for healthcare. According to this metric, the healthiest states are Vermont, New Hampshire and Iowa; the unhealthiest are West Virgina, Arkansas and Mississippi.</p>
-						<button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button>
+						<p style="padding-left:10px; font-size:14pt;" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The University of Wisconsin compiles a dataset called County Health Rankings. There's a variable called "poor or fair health", which is the percentage of adults reporting fair or poor health. The higher this percentage, the greater the demand for healthcare. According to this metric, the healthiest states are Vermont, New Hampshire and Iowa; the unhealthiest are West Virgina, Arkansas and Mississippi.</p>
+						<a href="#features"><button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button></a>
 						<button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button>
 					</div>
 				</div>
@@ -177,7 +174,7 @@
 
 
 
-      <div id="insurance_row" style="padding-top:30px;" class="row">
+      <div id="insurance_row" style="padding-top:100px;" class="row">
 				<div class="col-md-12 sol-sm-12">
 					<div class="text-center">
 						<h1 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s"><strong>Insurance</strong></h1>
@@ -187,16 +184,15 @@
 				<div id="insurance" class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
-						<h2 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">See the chart <br/> (Bar chart by state)</h2>
-						<p data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The percentage of uninsured is also an indicator of demand: Those with insurance are more likely to be able to pay for health services. Unfortunately, it those in the unhealthiest states are also least able to pay due to low rates of insurance coverage.  </p>
-						<button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button>
-						<button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button>
+						<p style="padding-left:10px; font-size:14pt;" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The percentage of uninsured is also an indicator of demand: Those with insurance are more likely to be able to pay for health services. Unfortunately, it those in the unhealthiest states are also least able to pay due to low rates of insurance coverage.  </p>
+						<a href="#features"><button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button></a>
+						<a href="#income_row"><button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button></a>
 					</div>
 				</div>
 			</div>
       <br /><br /><br /><br />
 
-      <div id="income_row" class="row">
+      <div id="income_row" class="row" style="padding-top:100px;" >
 				<div class="col-md-12 sol-sm-12">
 					<div class="text-center">
 						<h1 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s"><strong>Income</strong></h1>
@@ -206,16 +202,15 @@
 				<div id="income"class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
-						<h2 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">See the chart <br/> (Bar chart by state)</h2>
-						<p data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Those with higher incomes also tend to be healthier. This reveals another gap: Those with the fewest health problems are most able to pay for it. </p>
-						<button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button>
-						<button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button>
+						<p style="padding-left:10px; font-size:14pt;" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Those with higher incomes also tend to be healthier. This reveals another gap: Those with the fewest health problems are most able to pay for it. </p>
+						<a href="#features"><button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button></a>
+						<a href="#doctor_row"><button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button></a>
 					</div>
 				</div>
 			</div>
       <br /><br /><br /><br />
 
-      <div id="doctor_row" style="padding-top:30px;" class="row">
+      <div id="doctor_row" style="padding-top:100px;" class="row">
 				<div class="col-md-12 sol-sm-12">
 					<div class="text-center">
 						<h1 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s"><strong>Doctors</strong></h1>
@@ -225,16 +220,15 @@
 				<div id="doctors" class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
-						<h2 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">See the chart <br/> (Bar chart by state)</h2>
-						<p data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The more doctors, the greater the availability of healthcare. Doctors tend live in states with healthier populations.</p>
-						<button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button>
-						<button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button>
+						<p style="padding-left:10px; font-size:14pt;" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">The more doctors, the greater the availability of healthcare. Doctors tend live in states with healthier populations.</p>
+						<a href="#features"><button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button></a>
+						<a href="#expert_row"><button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button></a>
 					</div>
 				</div>
 			</div>
       <br /><br /><br /><br />
 
-      <div jid="expert_row" style="padding-top:30px;" class="row">
+      <div id="expert_row" style="padding-top:100px;" class="row">
 				<div class="col-md-12 sol-sm-12">
 					<div class="text-center">
 						<h1 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s"><strong>Healthcare Workers</strong></h1>
@@ -244,10 +238,9 @@
 				<div id="experts" class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
-						<h2 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">See the chart <br/></h2>
-						<p data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Healthcare doesn't just come from doctors. Occupations ranging from nurse practitioners to nutritionists to dentists also provice essential services. The higher the proportion of healthcare workers, the greater the availability of healthcare.</p>
-						<button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button>
-						<button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button>
+						<p style="padding-left:10px; font-size:14pt;" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Healthcare doesn't just come from doctors. Occupations ranging from nurse practitioners to nutritionists to dentists also provice essential services. The higher the proportion of healthcare workers, the greater the availability of healthcare.</p>
+						<a href="#features"><button class="btn btn-md btn-primary" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Back to Stories</button></a>
+						<a href="#slider"><button class="btn btn-md btn-default" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">Keep Going!</button></a>
 					</div>
 				</div>
 			</div>
@@ -264,7 +257,7 @@
 				<div class="col-md-12 sol-sm-12">
 					<div class="text-center">
 						<h1 data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">Download it for Free</h1>
-						<p class="lead" data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumqueLorem ipsum dolor sit amet, consectetur adipisicing </p>
+						<p class="lead" data-scroll-reveal="wait 0.25s, then enter top an d move 40px over 1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumqueLorem ipsum dolor sit amet, consectetur adipisicing </p>
 					</div>
 				</div>
                             <div class="gap"></div>
@@ -322,14 +315,7 @@
            <div class="row">
                <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" id="share">
 
-                   <div id="social_icons">
-                       <ul>
-                          <li><a href="#" data-scroll-reveal="wait 0.45s, then enter left and move 80px over 1s"><i class="fa fa-facebook"></i></a></li>
-			 <li><a href="#" data-scroll-reveal="wait 0.45s, then enter right and move 80px over 1s"><i class="fa fa-twitter"></i></a></li>
-			 <li><a href="#" data-scroll-reveal="wait 0.45s, then enter bottom and move 80px over 1s"><i class="fa fa-linkedin"></i></a></li>
-			 <li><a href="#" data-scroll-reveal="wait 0.45s, then enter top and move 80px over 1s"><i class="fa fa-youtube"></i></a></li>
-                       </ul>
-                   </div>
+
 
                    <p>Copyright &copy; 2017 DataUSA Hackathon Designed by Andrew Dane, Claudia D'ottillie, Dan Armstrong</p>
 
