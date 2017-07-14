@@ -3,6 +3,8 @@
 <html>
     <head>
         <title>Revealed Comparitive Advantage</title>
+        <script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.13.full.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
          <!-- CSS Files comes here -->
@@ -44,7 +46,7 @@
 	          <a href="#main">Home</a>
 	        </li>
 	        <li>
-	          <a href="#features">Features</a>
+	          <a href="#features">Explore Features</a>
 	        </li>
 	        <li>
 	          <a href="#product">Explore Data</a>
@@ -154,7 +156,7 @@
 						<h1 data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s"><strong>Health Care Demand</strong></h1>
 					</div>
 				</div>
-                            <div class="gap"></div>
+                          <div class="gap"></div>
 				<div id="demand" class="col-lg-8 col-sm-12" style="height:500px;"></div>
 				<div class="col-lg-4 col-sm-12" style="padding-left:20px;float:right;">
 					<div>
@@ -305,7 +307,7 @@
 
                     <h2 data-scroll-reveal="wait 0.45s, then enter left and move 80px over 1s">Thanks for Visiting!</h2>
 
-                    
+
                     <div id="preview"></div>
 
                 </div>
@@ -331,8 +333,199 @@
         </div>
     </section>
          <!----------------------------------/Footer----------------------------------->
+<script>
+//first chart: Number of Doctors vs. Poor Health by State
+    d3.json("https://api.datausa.io/attrs/geo/",function(error, data){
+      data = d3plus.dataFold(data);
 
+      var nameLookup = data.reduce(function(obj,d){
+        obj[d.id]= d.display_name;
+        return obj;
+    }, {});
+    var chart = new d3plus.Plot();
 
+    var settings= {
+      data:"HealthData.csv",
+      select:"#doctors",
+      groupBy: "geo",
+      legend: false,
+      label: function(d){
+        return d.geo_name
+      },
+      y: function(d){
+        return d.poor_health;
+      },
+      x: function(d){
+      return d.physicians_rca;
+    },
+    xConfig:{
+      title:"Number of Physicians and Surgeons"
+    },
+    yConfig:{
+      title:"Percent of People Reporting Poor or Fair Health"
+    }
+  }
+  chart
+  .config(settings)
+  .render();
+  console.log(nameLookup);
+  });
+
+  //Second chart: Number of Doctors vs. Income Equality by State
+  d3.json("https://api.datausa.io/attrs/geo/",function(error, data){
+    data = d3plus.dataFold(data);
+
+    var nameLookup = data.reduce(function(obj,d){
+      obj[d.id]= d.display_name;
+      return obj;
+  }, {});
+  var chart = new d3plus.Plot();
+
+  var settings= {
+    data:"HealthData.csv",
+    select:"#income",
+    groupBy: "geo",
+    legend: false,
+    label: function(d){
+      return d.geo_name
+    },
+    y: function(d){
+      return d.poor_health;
+    },
+    x: function(d){
+    return d.Income;
+  },
+
+  xConfig:{
+    title:"Average Income"
+  },
+  yConfig:{
+    title:"Percent of People Reporting Poor or Fair Health"
+  }
+  }
+
+  chart
+  .config(settings)
+  .render();
+  console.log(nameLookup);
+  });
+
+  //chart 3
+  d3.json("https://api.datausa.io/attrs/geo/",function(error, data){
+    data = d3plus.dataFold(data);
+
+    var nameLookup = data.reduce(function(obj,d){
+      obj[d.id]= d.display_name;
+      return obj;
+  }, {});
+  var chart = new d3plus.BarChart();
+
+  var settings= {
+    data:"HealthData.csv",
+    select:"#demand",
+    groupBy: "geo",
+    legend: false,
+    label: function(d){
+      return d.geo_name
+    },
+    y: function(d){
+      return d.poor_health;
+    },
+    x: function(d){
+    return d.geo;
+  },
+  xSort: function(a,b){
+    return a.poor_health - b.poor_health;
+  },
+  yConfig:{
+    title:"Percent of People Reporting Poor or Fair Health"
+  },
+  xConfig:{
+    title:"State"
+  }
+  }
+
+  chart
+  .config(settings)
+  .render();
+  console.log(nameLookup);
+  });
+
+  d3.json("https://api.datausa.io/attrs/geo/",function(error, data){
+    data = d3plus.dataFold(data);
+
+    var nameLookup = data.reduce(function(obj,d){
+      obj[d.id]= d.display_name;
+      return obj;
+  }, {});
+  var chart = new d3plus.Plot();
+
+  var settings= {
+    data:"HealthData.csv",
+    select:"#insurance",
+    groupBy: "geo",
+    legend: false,
+    label: function(d){
+      return d.geo_name
+    },
+    y: function(d){
+      return d.poor_health;
+    },
+    x: function(d){
+    return d.insurance;
+  },
+  yConfig:{
+    title:"Percent of People Reporting Poor or Fair Health"
+  },
+  xConfig:{
+    title: "Percent of Population with Insurance"
+  }
+  }
+
+  chart
+  .config(settings)
+  .render();
+  console.log(nameLookup);
+  });
+
+  d3.json("https://api.datausa.io/attrs/geo/",function(error, data){
+    data = d3plus.dataFold(data);
+
+    var nameLookup = data.reduce(function(obj,d){
+      obj[d.id]= d.display_name;
+      return obj;
+  }, {});
+  var chart = new d3plus.Plot();
+
+  var settings= {
+    data:"HealthData.csv",
+    select:"#experts",
+    groupBy: "geo",
+    legend: false,
+    label: function(d){
+      return d.geo_name
+    },
+    y: function(d){
+      return d.poor_health;
+    },
+    x: function(d){
+    return d.gini;
+  },
+  yConfig:{
+    title:"Percent of People Reporting Poor or Fair Health"
+  },
+  xConfig:{
+    title:"Income Inequality"
+  }
+  }
+
+  chart
+  .config(settings)
+  .render();
+  console.log(nameLookup);
+  });
+
+</script>
 
 
     <script src="library/jquery-2.0.3.min.js"></script>
